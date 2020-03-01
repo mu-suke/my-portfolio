@@ -1,7 +1,7 @@
 <template>
   <section class="profile">
     <v-container>
-      <section-title icon="account-outline" title="Profile" />
+      <section-header icon="account-outline" title="Profile" />
       <v-layout justify-center>
         <v-col>
           <v-row>
@@ -59,11 +59,11 @@
 </template>
 
 <script>
-import SectionTitle from '~/components/atoms/SectionTitle.vue'
+import SectionHeader from '~/components/molecules/SectionHeader'
 
 export default {
   components: {
-    SectionTitle
+    SectionHeader
   }
 }
 </script>

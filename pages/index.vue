@@ -21,7 +21,6 @@
         </v-col>
       </v-row>
     </v-parallax>
-
     <v-col
       xs="8"
       sm="8"
@@ -29,20 +28,20 @@
       class="mx-auto"
     >
       <my-profile />
-      <section-title icon="file-document-edit-outline" title="Posts" />
+      <my-skills />
     </v-col>
   </v-container>
 </template>
 
 <script>
 import MyProfile from '~/components/organisms/MyProfile.vue'
-import SectionTitle from '~/components/atoms/SectionTitle.vue'
+import MySkills from '~/components/organisms/MySkills'
 
 export default {
   transition: 'slide-left',
   components: {
     MyProfile,
-    SectionTitle
+    MySkills
   }
 }
 </script>
