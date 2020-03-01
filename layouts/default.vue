@@ -17,7 +17,11 @@
       absolute
       color="primary"
     >
-      <span class="white--text">&copy; 2019-2020 mu-suke</span>
+      <v-col
+        class="text-center white--text"
+      >
+        {{ new Date().getFullYear() }} — mu-suke
+      </v-col>
     </v-footer>
   </v-app>
 </template>
