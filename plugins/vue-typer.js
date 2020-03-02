@@ -1,0 +1,1 @@
+import VueTyperPlugin from 'vue-typer'

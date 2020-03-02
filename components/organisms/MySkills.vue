@@ -1,15 +1,20 @@
 <template>
   <section class="skills">
     <section-header icon="file-document-edit-outline" title="Skills" />
-    <div class="text-center">
-      <v-chip
+    <v-row class="text-center" no-gutters>
+      <v-col
         v-for="(skill, index) in skillList"
         :key="index"
-        class="ma-2"
+        cols="4"
+        xs="2"
       >
-        {{ skill }}
-      </v-chip>
-    </div>
+        <v-chip
+          class="ma-2"
+        >
+          {{ skill }}
+        </v-chip>
+      </v-col>
+    </v-row>
   </section>
 </template>
 

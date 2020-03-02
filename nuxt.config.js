@@ -30,6 +30,7 @@ export default {
   ** Plugins to load before mounting the App
   */
   plugins: [
+    { src: '~plugins/particles.js', ssr: false }
   ],
   /*
   ** Nuxt.js dev-modules
@@ -72,13 +73,22 @@ export default {
           success: colors.green.accent3
         },
         light: {
-          primary: "193368",
+          primary: colors.indigo.darken1,
           secondary: colors.pink.base,
           accent: colors.cyan.base,
           error: colors.red.base,
           warning: colors.amber.base,
           info: colors.blue.base,
           success: colors.green.base
+        },
+        custom: {
+          primary: "#13334c",
+          secondary: "#005792",
+          accent: "#fd5f00",
+          error: "#fd5f00",
+          warning: "#fd5f00",
+          info: "#fd5f00",
+          success: "#f6f6e9",
         }
       }
     }
