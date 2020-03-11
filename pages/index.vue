@@ -21,7 +21,7 @@
         </v-col>
       </v-row>
     </v-parallax>
-    <particle />
+    <!-- <particle /> -->
     <v-col
       xs="8"
       sm="8"
@@ -35,14 +35,14 @@
 </template>
 
 <script>
-import Particle from '~/components/organisms/Particle'
+// import Particle from '~/components/organisms/Particle'
 import MyProfile from '~/components/organisms/MyProfile.vue'
 import MySkills from '~/components/organisms/MySkills'
 
 export default {
   transition: 'slide-left',
   components: {
-    Particle,
+    // Particle,
     MyProfile,
     MySkills
   }

@@ -2,7 +2,7 @@
   <div id="snowfall">
     <vue-typer
       :text="['Arya Stark','Jon Snow','Daenerys Targaryen','Melisandre','Tyrion Lannister']"
-      :repeat="Infinity"
+      :repeat='Infinity'
       :shuffle='false'
       initial-action='typing'
       :pre-type-delay='70'
