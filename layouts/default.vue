@@ -1,28 +1,14 @@
 <template>
   <v-app>
-    <v-app-bar
-      app
-      color="primary"
-      hide-on-scroll
+    <v-container
+      fill-height
+      fluid
+      class="bg"
     >
-      <v-toolbar-title>
-        <span class="headline white--text title">&lt;mu-suke's Portfolio Site/&gt;</span>
-      </v-toolbar-title>
-    </v-app-bar>
-    <v-content>
-      <nuxt />
-    </v-content>
-    <v-footer
-      app
-      absolute
-      color="primary"
-    >
-      <v-col
-        class="text-center white--text"
-      >
-        {{ new Date().getFullYear() }} — mu-suke
-      </v-col>
-    </v-footer>
+      <transition mode="out-in">
+        <nuxt class="mx-auto" />
+      </transition>
+    </v-container>
   </v-app>
 </template>
 
@@ -39,21 +25,33 @@ h1, h2, h3 {
   margin: 100px 0 30px;
   text-align: center;
 }
-.slide-left-enter {
-  transform: translateX(2000px);
+.v-enter-active, .v-leave-active {
+  transition: opacity 1s;
+}
+.v-enter, .v-leave-to {
   opacity: 0;
 }
-.slide-left-enter-active {
-  transition: all .3s linear;
+.bg {
+  background-image: url("~@/assets/bg.jpg");
+  background-position: center;
+  background-size: cover;
+  position: relative;
+  z-index: 0;
+  overflow: hidden;
 }
-.slide-left-leave-to {
-  transform: translateX(-2000px);
-  opacity: 0;
-}
-.slide-left-leave-active {
-  transition: all .3s linear;
-}
-.main {
-  background-color: lightskyblue;
+.bg:before{
+  content: '';
+  background: inherit;
+  -webkit-filter: blur(5px);
+  -moz-filter: blur(5px);
+  -o-filter: blur(5px);
+  -ms-filter: blur(5px);
+  filter: blur(5px);
+  position: absolute;
+  top: -5px;
+  left: -5px;
+  right: -5px;
+  bottom: -5px;
+  z-index: -1;
 }
 </style>

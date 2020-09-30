@@ -1,50 +1,36 @@
 <template>
   <v-container
+    fill-height
     fluid
-    class="pa-0"
+    class="mx-auto"
   >
-    <v-parallax
-      dark
-      src="https://cdn.vuetifyjs.com/images/backgrounds/vbanner.jpg"
-    >
-      <v-row
-        align="center"
-        justify="center"
-      >
-        <v-col class="text-center" cols="12">
-          <h1 class="display-1 font-weight-thin mb-4">
-            Welcome to mu-suke's Portfolio Site!
-          </h1>
-          <h4 class="subheading">
-            Ha Ha Ha!
-          </h4>
-        </v-col>
-      </v-row>
-    </v-parallax>
-    <!-- <particle /> -->
-    <v-col
-      xs="8"
-      sm="8"
-      lg="8"
-      class="mx-auto"
-    >
-      <my-profile />
-      <my-skills />
-    </v-col>
+    <div class="text-center py-4 mb-4">
+      <v-btn color="white" large>
+        <nuxt-link to="about">
+          About
+        </nuxt-link>
+      </v-btn>
+    </div>
+    <div class="text-center py-4 mb-4">
+      <v-btn color="white" large>
+        <nuxt-link to="work">
+          Work
+        </nuxt-link>
+      </v-btn>
+    </div>
+    <div class="text-center py-4 mb-4">
+      <v-btn color="white" large>
+        <nuxt-link to="contact">
+          Contact
+        </nuxt-link>
+      </v-btn>
+    </div>
   </v-container>
 </template>
 
 <script>
-// import Particle from '~/components/organisms/Particle'
-import MyProfile from '~/components/organisms/MyProfile.vue'
-import MySkills from '~/components/organisms/MySkills'
 
 export default {
-  transition: 'slide-left',
-  components: {
-    // Particle,
-    MyProfile,
-    MySkills
-  }
+  transition: 'out-in'
 }
 </script>
