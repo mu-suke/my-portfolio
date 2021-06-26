@@ -13,6 +13,7 @@
   },
   "dependencies": {
     "@nuxtjs/axios": "^5.3.6",
+    "@nuxtjs/sitemap": "^2.4.0",
     "nuxt": "^2.0.0",
     "particles.js": "^2.0.0"
   },
